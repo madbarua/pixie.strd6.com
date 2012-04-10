@@ -1,13 +1,13 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.4'
+gem 'rails', '3.2.3'
 
 group :assets do
-  gem 'sass-rails', "~> 3.1.4"
-  gem 'coffee-rails', "~> 3.1.0"
-  gem "sprockets-jquery-tmpl"
+  gem 'compass-rails'
+  gem 'jquery-tmpl-rails'
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier'
-  gem 'compass', :git => 'git://github.com/chriseppstein/compass.git', :branch => 'rails31'
 end
 
 group :production do
@@ -15,14 +15,13 @@ group :production do
 end
 
 gem 'acts-as-taggable-on'
-gem "authlogic", :git => "git://github.com/odorcicd/authlogic.git", :branch => "rails3"
+gem "authlogic" #, :git => "git://github.com/odorcicd/authlogic.git", :branch => "rails3"
 gem "aws-s3", :require => "aws/s3"
 gem 'bluecloth'
 gem 'bone_tree', :git => "git://github.com/mdiebolt/bone_tree.git"
 gem "capistrano"
 gem "coffee-filter"
 gem "corelib", :git => "git://github.com/mdiebolt/corelib.git"
-gem "delayed_job", "2.1.4"
 gem 'evergreen', :require => 'evergreen/rails'
 gem "exception_notification", :git => "git://github.com/rails/exception_notification.git", :require => 'exception_notifier'
 gem 'gratr', :git => "git://github.com/jdleesmiller/gratr.git"
@@ -32,6 +31,7 @@ gem 'html5-boilerplate'
 gem 'json'
 gem 'mail'
 gem "mocha"
+gem "oink"
 gem 'paperclip'
 gem "pg"
 gem 'rabl'
@@ -48,4 +48,5 @@ group :test do
   gem "factory_girl", :git => "git://github.com/thoughtbot/factory_girl.git"
   gem "shoulda"
   gem "turn", :require => false
+  gem "ruby-prof"
 end
